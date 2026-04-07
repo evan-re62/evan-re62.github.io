@@ -1,81 +1,51 @@
-/* === GENERAL === */
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow-x: hidden;
+/* CONTENU CACHÉ BEAUTÉ */
+.ac-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    margin-top: 10px;
+    padding-left: 0;
 }
 
-/* DECORATION FLOTTANTE */
-.side-bubble {
-    position: fixed;
-    border-radius: 50%;
-    opacity: 0.1;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.side-bubble1 { width: 100px; height: 100px; left: 20px; top: 100px; background: #3b82f6; }
-.side-bubble2 { width: 150px; height: 150px; right: 30px; top: 200px; background: #2563eb; }
-.side-bubble3 { width: 80px; height: 80px; left: 50px; bottom: 150px; background: #3b82f6; }
-.side-bubble4 { width: 120px; height: 120px; right: 60px; bottom: 100px; background: #2563eb; }
-
-/* HEADER */
-header {
-    text-align: center;
-    padding: 40px 20px;
-    background: rgba(0,0,0,0.4);
+/* Quand actif */
+.ac.active .ac-content {
+    max-height: 1000px;
+    padding: 15px 20px;
+    background: rgba(59,130,246,0.1); /* bleu clair transparent */
+    border-radius: 15px;
+    border: 1px solid rgba(59,130,246,0.4);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    position: relative;
-    z-index: 1;
 }
-header h1 {
-    font-size: 2.5em;
+
+/* Texte intérieur avec couleurs pour chaque catégorie */
+.ac-content p {
+    margin: 10px 0;
+    padding-left: 10px;
+    line-height: 1.5;
+    border-left: 4px solid #3b82f6; /* bleu */
+    position: relative;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+/* Petite icône à gauche de chaque point */
+.ac-content p::before {
+    content: "•";
     color: #3b82f6;
-}
-
-/* BOUTON RETOUR */
-.back {
+    font-weight: bold;
     display: inline-block;
-    margin: 20px;
-    padding: 10px 20px;
-    background: #3b82f6;
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    transition: 0.3s;
-    position: relative;
-    z-index: 1;
+    width: 20px;
+    margin-left: -20px;
 }
-.back:hover { background: #2563eb; transform: scale(1.05); }
 
-/* CONTENEUR */
-.container { max-width: 700px; margin: auto; padding: 20px; position: relative; z-index: 1; }
-
-/* CARTES AC */
-.ac {
-    background: #1e293b;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    border: 1px solid #3b82f6;
-    position: relative;
-    z-index: 1;
+/* Coloration différente pour les titres de section */
+.ac-content p b {
+    color: #60a5fa; /* bleu clair */
 }
-.ac:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(59,130,246,0.5); background: #273449; }
 
-/* TITRE AC avec icône */
-.ac h2 { color: #3b82f6; font-size: 1.5em; margin: 0; display: flex; align-items: center; }
-.ac h2::before { content: "💡"; margin-right: 10px; }
-
-/* CONTENU CACHÉ */
-.ac-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.3s ease; margin-top: 10px; padding-left: 10px; }
-.ac.active .ac-content { max-height: 1000px; padding-top: 15px; }
-
-/* TEXTE CONTENU */
-.ac-content p { margin: 8px 0; line-height: 1.4; border-left: 3px solid #3b82f6; padding-left: 10px; }
+/* Hover sur chaque ligne */
+.ac-content p:hover {
+    background: rgba(59,130,246,0.2);
+}
