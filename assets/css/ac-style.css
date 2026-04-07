@@ -7,7 +7,6 @@ body {
     padding: 0;
     position: relative;
     overflow-x: hidden;
-    min-height: 100vh;
 }
 
 /* DECORATION FLOTTANTE */
@@ -31,13 +30,8 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: relative;
     z-index: 1;
-    margin-bottom: 20px;
 }
-header h1 {
-    font-size: 2.2em;
-    color: #3b82f6;
-    margin: 0;
-}
+header h1 { font-size: 2.5em; color: #3b82f6; margin: 0; }
 
 /* BOUTON RETOUR */
 .back {
@@ -51,101 +45,66 @@ header h1 {
     transition: 0.3s;
     position: relative;
     z-index: 1;
-    font-weight: bold;
 }
 .back:hover { background: #2563eb; transform: scale(1.05); }
 
 /* CONTENEUR */
-.container { 
-    max-width: 850px; 
-    margin: auto; 
-    padding: 20px; 
-    position: relative; 
-    z-index: 1; 
-}
+.container { max-width: 800px; margin: auto; padding: 20px; position: relative; z-index: 1; }
 
-/* === BLOCS AC (ACCORDÉONS) === */
+/* === NOUVEAU STYLE POUR LES BLOCS AC === */
 .ac {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.05); /* Fond du bloc */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure discrète */
+    border-radius: 12px;
+    margin-bottom: 15px; /* Espace entre les blocs */
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-/* Style du titre h2 à l'intérieur du bloc */
+/* Titres H2 transformés en entêtes de blocs */
 .ac h2 {
+    font-size: 1.1em;
     margin: 0;
     padding: 20px;
-    font-size: 1.1em;
-    color: #e2e8f0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    color: #fff;
     transition: color 0.3s;
 }
 
-/* Flèche décorative */
-.ac h2::after {
-    content: '▼';
-    font-size: 0.7em;
-    transition: transform 0.3s;
-    color: #3b82f6;
-}
-
-/* Hover sur le bloc */
+/* Effet au survol du bloc entier */
 .ac:hover {
-    background: rgba(59, 130, 246, 0.12);
-    border-color: rgba(59, 130, 246, 0.5);
-    transform: translateY(-2px);
-}
-
-/* État Actif */
-.ac.active {
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(59, 130, 246, 0.15); /* Devient bleuté au survol */
     border-color: #3b82f6;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transform: translateX(5px); /* Petit décalage vers la droite */
 }
 
-.ac.active h2 {
-    color: #3b82f6;
+/* État quand le bloc est ouvert */
+.ac.active {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.05);
 }
-
-.ac.active h2::after {
-    transform: rotate(180deg);
-}
+.ac.active h2 { color: #3b82f6; }
 
 /* CONTENU CACHÉ */
 .ac-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, padding 0.3s ease;
-    padding: 0 20px; /* Pas de padding vertical quand c'est fermé */
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    padding: 0 20px; /* Pas de padding vertical si fermé */
 }
 
-/* Quand le contenu est révélé */
 .ac.active .ac-content {
     max-height: 1000px;
-    padding: 10px 20px 25px 20px;
+    padding-bottom: 20px; /* Ajoute de l'espace en bas une fois ouvert */
 }
 
-/* Lignes de texte intérieures */
+/* Style des paragraphes intérieurs */
 .ac-content p {
     margin: 10px 0;
-    line-height: 1.6;
-    background: rgba(255,255,255,0.03);
-    border-radius: 8px;
-    padding: 12px 15px;
+    line-height: 1.5;
     border-left: 4px solid #3b82f6;
-    transition: background 0.3s;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 10px 15px;
 }
 
-.ac-content p:hover {
-    background: rgba(59,130,246,0.1);
-}
-
-.ac-content p b {
-    color: #60a5fa;
-}
+.ac-content p b { color: #60a5fa; }
