@@ -1,3 +1,60 @@
+/* === GENERAL === */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* DECORATION FLOTTANTE */
+.side-bubble {
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.side-bubble1 { width: 100px; height: 100px; left: 20px; top: 100px; background: #3b82f6; }
+.side-bubble2 { width: 150px; height: 150px; right: 30px; top: 200px; background: #2563eb; }
+.side-bubble3 { width: 80px; height: 80px; left: 50px; bottom: 150px; background: #3b82f6; }
+.side-bubble4 { width: 120px; height: 120px; right: 60px; bottom: 100px; background: #2563eb; }
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+header h1 {
+    font-size: 2.5em;
+    color: #3b82f6;
+}
+
+/* BOUTON RETOUR */
+.back {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+}
+.back:hover { background: #2563eb; transform: scale(1.05); }
+
+/* CONTENEUR */
+.container { max-width: 700px; margin: auto; padding: 20px; position: relative; z-index: 1; }
+
 /* CONTENU CACHÉ BEAUTÉ */
 .ac-content {
     max-height: 0;
