@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Administrer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence : Administrer</title>
     <link rel="stylesheet" href="/assets/css/ac-style.css">
 </head>
 <body>
@@ -19,79 +20,114 @@
 <a href="index.html" class="back">⬅ Retour</a>
 
 <div class="container">
+    <div class="main-wrapper">
+        
+        <aside class="sidebar">
+            <div class="sidebar-block">
+                <h3>Statut du Module</h3>
+                <div class="status-badge">En cours de validation</div>
+            </div>
 
-    <div class="ac" onclick="toggleAC(this)">
-        <h2>AC11.01 - Maîtriser les lois fondamentales de l’électricité</h2>
-        <div class="ac-content">
-            <p><b>Ce que j’ai fait :</b> J’ai étudié les lois de l’électricité et réalisé des interventions sur des équipements simples.</p>
-            <p><b>Pourquoi :</b> Pour pouvoir diagnostiquer et réparer des équipements réseaux en toute sécurité.</p>
-            <p><b>Comment :</b> Lecture de manuels, tutoriels en ligne, mesures sur maquette avec multimètre.</p>
-            <p><b>Difficultés :</b> Compréhension des concepts de courant alternatif et continu, sécurité électrique.</p>
-            <p><b>Ce que j’en ai appris :</b> Bases solides pour intervenir sur le matériel réseau.</p>
-            <p><b>Ce que je ferais autrement :</b> Faire plus de mises en situation pratiques pour mieux visualiser les risques.</p>
-        </div>
+            <div class="sidebar-block">
+                <h3>Progression</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+                <p class="progress-text">85% des objectifs atteints</p>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>Infos Complémentaires</h3>
+                <p>Ces AC valident la capacité à gérer une infrastructure réseau de base et à maintenir des postes clients.</p>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>Outils utilisés</h3>
+                <ul class="tags">
+                    <li>Packet Tracer</li>
+                    <li>Wireshark</li>
+                    <li>Linux CLI</li>
+                    <li>Windows Server</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+
+            <div class="ac" onclick="toggleAC(this)">
+                <h2>AC11.01 - Maîtriser les lois fondamentales de l’électricité</h2>
+                <div class="ac-content">
+                    <p><b>Ce que j’ai fait :</b> J’ai étudié les lois de l’électricité et réalisé des interventions sur des équipements simples.</p>
+                    <p><b>Pourquoi :</b> Pour pouvoir diagnostiquer et réparer des équipements réseaux en toute sécurité.</p>
+                    <p><b>Comment :</b> Lecture de manuels, tutoriels en ligne, mesures sur maquette avec multimètre.</p>
+                    <p><b>Difficultés :</b> Compréhension des concepts de courant alternatif et continu, sécurité électrique.</p>
+                    <p><b>Ce que j’en ai appris :</b> Bases solides pour intervenir sur le matériel réseau.</p>
+                    <p><b>Ce que je ferais autrement :</b> Faire plus de mises en situation pratiques pour mieux visualiser les risques.</p>
+                </div>
+            </div>
+
+            <div class="ac" onclick="toggleAC(this)">
+                <h2>AC11.02 - Comprendre l'architecture et les fondements des systèmes numériques</h2>
+                <div class="ac-content">
+                    <p><b>Ce que j’ai fait :</b> J’ai étudié les architectures matérielles et logicielles, les bases du codage et les protocoles Internet.</p>
+                    <p><b>Pourquoi :</b> Pour comprendre comment fonctionnent les systèmes et la communication de données.</p>
+                    <p><b>Comment :</b> Lecture de documentation, schémas de réseau, exercices de codage simples.</p>
+                    <p><b>Difficultés :</b> La complexité des protocoles et des architectures multiples.</p>
+                    <p><b>Ce que j’en ai appris :</b> Vision globale des systèmes numériques et communication de l’information.</p>
+                    <p><b>Ce que je ferais autrement :</b> Faire des TP pratiques sur simulateurs réseau pour mieux visualiser le flux d’information.</p>
+                </div>
+            </div>
+
+            <div class="ac" onclick="toggleAC(this)">
+                <h2>AC11.03 - Configurer les fonctions de base du réseau local</h2>
+                <div class="ac-content">
+                    <p><b>Ce que j’ai fait :</b> J’ai configuré des postes clients, des routeurs et switchs pour créer un réseau local fonctionnel.</p>
+                    <p><b>Pourquoi :</b> Pour garantir la communication entre les équipements d’un réseau interne.</p>
+                    <p><b>Comment :</b> Utilisation de consoles de configuration, commandes réseau, et tests de connectivité.</p>
+                    <p><b>Difficultés :</b> Paramètres IP mal configurés, conflits d’adresses.</p>
+                    <p><b>Ce que j’en ai appris :</b> Importance de la planification et des standards IP.</p>
+                    <p><b>Ce que je ferais autrement :</b> Créer un plan d’adressage avant de configurer les équipements.</p>
+                </div>
+            </div>
+
+            <div class="ac" onclick="toggleAC(this)">
+                <h2>AC11.04 - Maîtriser les rôles et principes fondamentaux des systèmes d’exploitation</h2>
+                <div class="ac-content">
+                    <p><b>Ce que j’ai fait :</b> J’ai utilisé Windows et Linux pour configurer et administrer des réseaux et services.</p>
+                    <p><b>Pourquoi :</b> Pour comprendre l’interaction entre OS et services réseau.</p>
+                    <p><b>Comment :</b> Installation, configuration de services comme DHCP et FTP, commandes terminal.</p>
+                    <p><b>Difficultés :</b> Différences entre OS, droits utilisateurs, gestion des services.</p>
+                    <p><b>Ce que j’en ai appris :</b> Administration multi-OS et dépannage de services réseau.</p>
+                    <p><b>Ce que je ferais autrement :</b> Suivre un tutoriel pas à pas pour chaque OS avant de mixer.</p>
+                </div>
+            </div>
+
+            <div class="ac" onclick="toggleAC(this)">
+                <h2>AC11.05 - Identifier les dysfonctionnements du réseau local</h2>
+                <div class="ac-content">
+                    <p><b>Ce que j’ai fait :</b> J’ai diagnostiqué des pannes sur le réseau local à l’aide de commandes ping, tracert et tests de connectivité.</p>
+                    <p><b>Pourquoi :</b> Pour pouvoir résoudre rapidement les problèmes et signaler correctement.</p>
+                    <p><b>Comment :</b> Observation des voyants des équipements, analyse des logs et tests réseau.</p>
+                    <p><b>Difficultés :</b> Identifier la source exacte des problèmes (câble, switch, IP).</p>
+                    <p><b>Ce que j’en ai appris :</b> Méthodologie de dépannage et importance de la documentation.</p>
+                    <p><b>Ce que je ferais autrement :</b> Prendre des notes détaillées pour chaque étape de diagnostic.</p>
+                </div>
+            </div>
+
+            <div class="ac" onclick="toggleAC(this)">
+                <h2>AC11.06 - Installer un poste client</h2>
+                <div class="ac-content">
+                    <p><b>Ce que j’ai fait :</b> J’ai installé un poste client, configuré le système et les logiciels réseau nécessaires.</p>
+                    <p><b>Pourquoi :</b> Pour que l’utilisateur puisse se connecter et utiliser les services du réseau.</p>
+                    <p><b>Comment :</b> Installation du système d’exploitation, configuration IP, accès aux ressources partagées.</p>
+                    <p><b>Difficultés :</b> Problèmes de compatibilité et permissions réseau.</p>
+                    <p><b>Ce que j’en ai appris :</b> Importance de la configuration correcte et des droits utilisateurs.</p>
+                    <p><b>Ce que je ferais autrement :</b> Préparer un guide pas à pas pour chaque type de poste.</p>
+                </div>
+            </div>
+
+        </main>
     </div>
-
-    <div class="ac" onclick="toggleAC(this)">
-        <h2>AC11.02 - Comprendre l'architecture et les fondements des systèmes numériques</h2>
-        <div class="ac-content">
-            <p><b>Ce que j’ai fait :</b> J’ai étudié les architectures matérielles et logicielles, les bases du codage et les protocoles Internet.</p>
-            <p><b>Pourquoi :</b> Pour comprendre comment fonctionnent les systèmes et la communication de données.</p>
-            <p><b>Comment :</b> Lecture de documentation, schémas de réseau, exercices de codage simples.</p>
-            <p><b>Difficultés :</b> La complexité des protocoles et des architectures multiples.</p>
-            <p><b>Ce que j’en ai appris :</b> Vision globale des systèmes numériques et communication de l’information.</p>
-            <p><b>Ce que je ferais autrement :</b> Faire des TP pratiques sur simulateurs réseau pour mieux visualiser le flux d’information.</p>
-        </div>
-    </div>
-
-    <div class="ac" onclick="toggleAC(this)">
-        <h2>AC11.03 - Configurer les fonctions de base du réseau local</h2>
-        <div class="ac-content">
-            <p><b>Ce que j’ai fait :</b> J’ai configuré des postes clients, des routeurs et switchs pour créer un réseau local fonctionnel.</p>
-            <p><b>Pourquoi :</b> Pour garantir la communication entre les équipements d’un réseau interne.</p>
-            <p><b>Comment :</b> Utilisation de consoles de configuration, commandes réseau, et tests de connectivité.</p>
-            <p><b>Difficultés :</b> Paramètres IP mal configurés, conflits d’adresses.</p>
-            <p><b>Ce que j’en ai appris :</b> Importance de la planification et des standards IP.</p>
-            <p><b>Ce que je ferais autrement :</b> Créer un plan d’adressage avant de configurer les équipements.</p>
-        </div>
-    </div>
-
-    <div class="ac" onclick="toggleAC(this)">
-        <h2>AC11.04 - Maîtriser les rôles et principes fondamentaux des systèmes d’exploitation</h2>
-        <div class="ac-content">
-            <p><b>Ce que j’ai fait :</b> J’ai utilisé Windows et Linux pour configurer et administrer des réseaux et services.</p>
-            <p><b>Pourquoi :</b> Pour comprendre l’interaction entre OS et services réseau.</p>
-            <p><b>Comment :</b> Installation, configuration de services comme DHCP et FTP, commandes terminal.</p>
-            <p><b>Difficultés :</b> Différences entre OS, droits utilisateurs, gestion des services.</p>
-            <p><b>Ce que j’en ai appris :</b> Administration multi-OS et dépannage de services réseau.</p>
-            <p><b>Ce que je ferais autrement :</b> Suivre un tutoriel pas à pas pour chaque OS avant de mixer.</p>
-        </div>
-    </div>
-
-    <div class="ac" onclick="toggleAC(this)">
-        <h2>AC11.05 - Identifier les dysfonctionnements du réseau local</h2>
-        <div class="ac-content">
-            <p><b>Ce que j’ai fait :</b> J’ai diagnostiqué des pannes sur le réseau local à l’aide de commandes ping, tracert et tests de connectivité.</p>
-            <p><b>Pourquoi :</b> Pour pouvoir résoudre rapidement les problèmes et signaler correctement.</p>
-            <p><b>Comment :</b> Observation des voyants des équipements, analyse des logs et tests réseau.</p>
-            <p><b>Difficultés :</b> Identifier la source exacte des problèmes (câble, switch, IP).</p>
-            <p><b>Ce que j’en ai appris :</b> Méthodologie de dépannage et importance de la documentation.</p>
-            <p><b>Ce que je ferais autrement :</b> Prendre des notes détaillées pour chaque étape de diagnostic.</p>
-        </div>
-    </div>
-
-    <div class="ac" onclick="toggleAC(this)">
-        <h2>AC11.06 - Installer un poste client</h2>
-        <div class="ac-content">
-            <p><b>Ce que j’ai fait :</b> J’ai installé un poste client, configuré le système et les logiciels réseau nécessaires.</p>
-            <p><b>Pourquoi :</b> Pour que l’utilisateur puisse se connecter et utiliser les services du réseau.</p>
-            <p><b>Comment :</b> Installation du système d’exploitation, configuration IP, accès aux ressources partagées.</p>
-            <p><b>Difficultés :</b> Problèmes de compatibilité et permissions réseau.</p>
-            <p><b>Ce que j’en ai appris :</b> Importance de la configuration correcte et des droits utilisateurs.</p>
-            <p><b>Ce que je ferais autrement :</b> Préparer un guide pas à pas pour chaque type de poste.</p>
-        </div>
-    </div>
-
 </div>
 
 <script>
