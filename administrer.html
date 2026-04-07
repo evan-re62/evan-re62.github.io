@@ -7,9 +7,11 @@
 </head>
 <body>
 
-<!-- Décor -->
-<div class="side-decor side-left"></div>
-<div class="side-decor side-right"></div>
+<!-- Bulles décoratives flottantes -->
+<div class="side-bubble side-bubble1"></div>
+<div class="side-bubble side-bubble2"></div>
+<div class="side-bubble side-bubble3"></div>
+<div class="side-bubble side-bubble4"></div>
 
 <header>
     <h1>Compétence : Administrer</h1>
@@ -43,7 +45,53 @@
         </div>
     </div>
 
-    <!-- AC3 à AC6 ici -->
+    <div class="ac" onclick="toggleAC(this)">
+        <h2>AC3 - Sécuriser le serveur</h2>
+        <div class="ac-content">
+            <p><b>Ce que j’ai fait :</b> Configuration pare-feu et SSH</p>
+            <p><b>Pourquoi :</b> Protéger le serveur</p>
+            <p><b>Comment :</b> UFW + clés SSH</p>
+            <p><b>Difficultés :</b> Ports bloqués par erreur</p>
+            <p><b>Ce que j’en ai appris :</b> Gestion sécurité réseau</p>
+            <p><b>Ce que je ferais autrement :</b> Documentation stricte</p>
+        </div>
+    </div>
+
+    <div class="ac" onclick="toggleAC(this)">
+        <h2>AC4 - Surveiller le serveur</h2>
+        <div class="ac-content">
+            <p><b>Ce que j’ai fait :</b> Installation outils monitoring</p>
+            <p><b>Pourquoi :</b> Suivi de performances</p>
+            <p><b>Comment :</b> Nagios + scripts</p>
+            <p><b>Difficultés :</b> Alertes trop nombreuses</p>
+            <p><b>Ce que j’en ai appris :</b> Surveillance efficace</p>
+            <p><b>Ce que je ferais autrement :</b> Filtrer alertes</p>
+        </div>
+    </div>
+
+    <div class="ac" onclick="toggleAC(this)">
+        <h2>AC5 - Automatiser les tâches</h2>
+        <div class="ac-content">
+            <p><b>Ce que j’ai fait :</b> Scripts bash pour backups</p>
+            <p><b>Pourquoi :</b> Gagner du temps</p>
+            <p><b>Comment :</b> Cron + bash</p>
+            <p><b>Difficultés :</b> Permissions incorrectes</p>
+            <p><b>Ce que j’en ai appris :</b> Gestion scripts</p>
+            <p><b>Ce que je ferais autrement :</b> Tester avant cron</p>
+        </div>
+    </div>
+
+    <div class="ac" onclick="toggleAC(this)">
+        <h2>AC6 - Maintenir le serveur</h2>
+        <div class="ac-content">
+            <p><b>Ce que j’ai fait :</b> Mises à jour régulières</p>
+            <p><b>Pourquoi :</b> Sécurité et stabilité</p>
+            <p><b>Comment :</b> Apt + vérification logs</p>
+            <p><b>Difficultés :</b> Conflits paquets</p>
+            <p><b>Ce que j’en ai appris :</b> Maintenance continue</p>
+            <p><b>Ce que je ferais autrement :</b> Automatiser updates</p>
+        </div>
+    </div>
 
 </div>
 
