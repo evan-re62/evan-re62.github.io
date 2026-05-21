@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence Future</title>
+    <link rel="stylesheet" href="assets/css/ac-style.css">
+    <style>
+        .wip-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Une icône de cadenas ou de calendrier plus sobre */
+        .lock-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .year-badge {
+            background: #3b82f6;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .wip-text h2 {
+            font-size: 2.2em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .wip-text p {
+            color: #94a3b8;
+            max-width: 600px;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .highlight { color: #60a5fa; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Futurs Modules</h1>
+</header>
+
+<a href="index.html" class="back">⬅ Retour à l'accueil</a>
+
+<div class="wip-wrapper">
+    <div class="year-badge">Programmé : 2ème Année</div>
+    <div class="lock-icon">🔒</div>
+    <div class="wip-text">
+        <h2>Contenu en attente de formation</h2>
+        <p>Cette compétence sera développée et documentée lors de ma <span class="highlight">deuxième année de BUT</span>.</p>
+        <p>Elle regroupera les projets et travaux pratiques liés aux réseaux complexes et aux services avancés.</p>
+    </div>
+</div>
+
+</body>
+</html>

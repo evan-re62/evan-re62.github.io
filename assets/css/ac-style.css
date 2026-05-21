@@ -15,8 +15,59 @@ body {
 .side-bubble4 { width: 120px; height: 120px; right: 60px; bottom: 100px; background: #2563eb; }
 
 /* HEADER */
-header { text-align: center; padding: 50px 20px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.05); }
-header h1 { font-size: 2.5em; color: #3b82f6; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+/* HEADER REVISITÉ - FOCUS SUR LE STYLE ET LA VISIBILITÉ */
+header { 
+    text-align: center; 
+    padding: 100px 20px 60px 20px; /* Plus d'espace en haut */
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 { 
+    font-size: 4em; /* On l'agrandit bien */
+    font-weight: 900;
+    margin: 0; 
+    text-transform: uppercase; 
+    letter-spacing: 6px;
+    display: inline-block; /* Pour que le dégradé s'applique bien au texte */
+    
+    /* Le dégradé qui brille */
+    background: linear-gradient(135deg, #fff 20%, #3b82f6 50%, #60a5fa 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Lueur néon */
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+    
+    animation: slideIn 1.2s ease-out;
+}
+
+/* Le sous-titre corrigé (plus gros et blanc/gris clair) */
+header::after {
+    content: "Réseaux et Télécommunication";
+    display: block;
+    font-size: 1rem; /* Taille lisible */
+    color: #94a3b8;
+    letter-spacing: 10px;
+    margin-top: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* Animation fluide */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Correction mobile */
+@media (max-width: 768px) {
+    header h1 { font-size: 2.2em; letter-spacing: 3px; }
+    header::after { font-size: 0.7rem; letter-spacing: 4px; }
+}
 
 /* BOUTON RETOUR */
 .back {
@@ -136,4 +187,112 @@ header h1 { font-size: 2.5em; color: #3b82f6; margin: 0; text-transform: upperca
 @media (max-width: 900px) {
     .main-container { flex-direction: column; }
     .sidebar { width: 100%; box-sizing: border-box; position: static; }
+}
+
+
+
+.annexe-special {
+    border-left: 5px solid #3b82f6 !important; /* Bordure plus épaisse */
+    background: rgba(59, 130, 246, 0.08) !important; /* Fond légèrement bleuté */
+    margin-top: 30px; /* Espace pour le séparer des AC */
+}
+
+.annexe-special h2 {
+    color: #60a5fa !important;
+}
+
+/* Organisation du contenu à l'intérieur */
+.annexe-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.annexe-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.annexe-item p {
+    background: none !important; /* On retire le fond gris des paragraphes standards */
+    border: none !important;
+    padding: 0 0 10px 0 !important;
+}
+
+/* Images */
+.media-container img {
+    width: 100%;
+    max-width: 600px; /* Évite que l'image soit trop géante */
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Vidéo Youtube */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Lien web */
+.external-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3b82f6;
+    color: white !important;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.external-link:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* --- NOUVELLE SOLUTION : ZONE DÉFILANTE POUR IMAGE DE TP --- */
+
+/* 1. On force l'accordéon à s'ouvrir complètement sans limite */
+.ac.active .ac-content { 
+    max-height: none !important; 
+    display: block !important;
+}
+
+/* 2. On crée la zone défilante pour l'image */
+.annexe-image-scroll {
+    max-height: 600px; /* C'est la hauteur "fenêtre" de ton image. Ajuste si besoin (ex: 500px, 700px) */
+    overflow-y: auto;  /* Active le défilement vertical uniquement */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2); /* Fond sombre pour mieux voir */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* 3. On s'assure que l'image à l'intérieur est bien dimensionnée */
+.annexe-image-scroll img {
+    width: 100%;       /* Prend toute la largeur de la zone défilante */
+    height: auto;      /* Garde les proportions */
+    display: block;
+    border-radius: 4px;
 }
